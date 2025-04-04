@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "format_flex"
+version = "0.0.3"
+description = "A flexible Python library for easy handling and conversion of Hierarchical, Tabular, and Serialized data formats."
+readme = "README.md"
+license = { text = "MIT" }
+keywords = [
+    "python",
+    "yaml",
+    "toml",
+    "json",
+    "csv",
+    "xml",
+    "excel",
+    "cbor",
+    "hdf5",
+    "parquet",
+    "messagepack",
+    "feather",
+    "bson",
+    "pickle",
+    "ubjson",
+    "orc",
+    "joblib",
+    "dill",
+    "cloudpickle"
+]
+authors = [
+    { name = "spring", email = "springnode@gmail.com" }
+]
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "xmltodict",
+    "pyyaml",
+    "lxml",
+    "toml",
+    "msgpack",
+    "bson",
+    "pymongo",
+    "cbor2",
+    "py-ubjson",
+    "pyarrow",
+    "pandas",
+    "orc",
+    "openpyxl",
+    "zstandard",
+    "tabulate",
+    "blosc",
+    "dill",
+    "joblib",
+    "cloudpickle",
+    "numpy"
+]
+[project.urls]
+Homepage = "https://github.com/NLPOptimize/FormatFlex"
+Issues = "https://github.com/NLPOptimize/FormatFlex/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["format_flex*"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.pyc", "*.pyo", "*.so", "*.pyd", "__pycache__"]
