@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5e7eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3353e2;stop-opacity:1" />
+      <animate attributeName="x1" from="0%" to="-100%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="100%" to="0%" dur="6s" repeatCount="indefinite" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3353e2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5e7eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+      <animate attributeName="x1" from="0%" to="-100%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="100%" to="0%" dur="6s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="500" fill="#e4e7ec" />
+  
+  <!-- Logo Elements -->
+  <g transform="translate(170, 170) scale(1.6)">
+    <!-- Ribbon Strips -->
+    <path d="M50,16 C65,16 80,40 95,40 C80,40 65,64 50,64 C35,64 20,40 5,40 C20,40 35,16 50,16" fill="url(#gradient1)">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 40" to="360 50 40" dur="12s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M50,28 C61,28 72,40 83,40 C72,40 61,52 50,52 C39,52 28,40 17,40 C28,40 39,28 50,28" fill="url(#gradient2)" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" from="360 50 40" to="0 50 40" dur="12s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Text -->
+  <text x="250" y="290" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" fill="#333333">FormatFlex</text>
+  
+  <!-- Subtle Shadow Effect -->
+  <ellipse cx="250" cy="350" rx="80" ry="20" fill="#bbc5d7" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite" />
+  </ellipse>
+</svg>
