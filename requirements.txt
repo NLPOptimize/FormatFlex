@@ -20,3 +20,4 @@ cloudpickle
 numpy
 build
 twine
+orjson

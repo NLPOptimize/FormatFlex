@@ -34,7 +34,9 @@ class GeneticData:
             basename, _ = os.path.splitext(file)
             return basename + self.extension_mapping[fmt]
 
-        def pickle(self, save_path: str) -> DataBlobTable:
+        def pickle(self, save_path: Union[str, None] = None) -> DataBlobTable:
+            if save_path is None:
+                raise TypeError("save_path cannot be None")
             result = pickle.dumps(self.data, protocol=pickle.HIGHEST_PROTOCOL)
             cctx = zstandard.ZstdCompressor(level=19, threads=os.cpu_count() * 2)
             compressed_data = cctx.compress(result)
@@ -43,21 +45,27 @@ class GeneticData:
                 f.write(compressed_data)
             return DataBlobTable(output_path)
 
-        def dill(self, save_path: str) -> DataBlobTable:
+        def dill(self, save_path: Union[str, None] = None) -> DataBlobTable:
+            if save_path is None:
+                raise TypeError("save_path cannot be None")
             result = dill.dumps(self.data)
             output_path = self._filename(save_path, GenericFormat.DILL)
             with open(output_path, "wb") as f:
                 f.write(result)
             return DataBlobTable(output_path)
 
-        def cloudpickle(self, save_path: str) -> DataBlobTable:
+        def cloudpickle(self, save_path: Union[str, None] = None) -> DataBlobTable:
+            if save_path is None:
+                raise TypeError("save_path cannot be None")
             result = cloudpickle.dumps(self.data)
             output_path = self._filename(save_path, GenericFormat.CLOUDPICKLE)
             with open(output_path, "wb") as f:
                 f.write(result)
             return DataBlobTable(output_path)
 
-        def joblib(self, save_path: str) -> DataBlobTable:
+        def joblib(self, save_path: Union[str, None] = None) -> DataBlobTable:
+            if save_path is None:
+                raise TypeError("save_path cannot be None")
             output_path = self._filename(save_path, GenericFormat.JOBLIB)
             joblib.dump(self.data, output_path, compress=("gzip", 9))
             return DataBlobTable(output_path)

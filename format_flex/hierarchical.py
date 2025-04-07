@@ -1,5 +1,5 @@
 from lxml import etree
-import json
+import orjson, json
 import yaml
 import toml
 import os
@@ -92,7 +92,9 @@ class HierarchicalData:
             return DataBlobText(result, self.extension_mapping[HierarchicalFormat.YAML])
 
         def toml(self, save_path: Union[str, None] = None) -> DataBlobText:
-            result = toml.dumps(self.data)
+            #result = toml.dumps(self.data)
+            hdata_dict = {"items": self.data} if isinstance(self.data, list) else self.data
+            result = toml.dumps(hdata_dict)
             if save_path is not None:
                 output_path = self._filename(save_path, HierarchicalFormat.TOML)
                 with open(output_path, "wt", encoding="utf-8") as f:
@@ -179,6 +181,7 @@ class HierarchicalData:
             return yaml.safe_load(self.data)
 
         def toml(self) -> dict:
+
             return toml.loads(self.data)
 
         def cbor2(self) -> dict:
