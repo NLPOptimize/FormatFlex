@@ -3,7 +3,10 @@
 
 # FormatFlex
 
-**FormatFlex** is a flexible Python library designed to seamlessly handle various text and data formats.
+### **FormatFlex** is a flexible Python library designed to seamlessly handle various text and data formats.
+
+#### (This repository welcomes as many pull requests (PRs) as possible. Your active contributions are greatly appreciated!)
+
 
 ## Supported Data Formats
 
