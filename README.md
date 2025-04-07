@@ -1,3 +1,6 @@
+
+![FormatFlex_banner](https://github.com/user-attachments/assets/5dedcbbf-870c-4aa9-ac7d-6abb3474023d)
+
 # FormatFlex
 
 **FormatFlex** is a flexible Python library designed to seamlessly handle various text and data formats.
@@ -11,7 +14,7 @@
 - TOML
 - CBOR2
 - MSGPACK
-- BSON
+- ~~BSON~~ 🆘
 - UBJSON
 
 ### Tabular Data (`TData`)
@@ -20,7 +23,7 @@
 - Parquet
 - ORC
 - Feather
-- HDF5
+- ~~HDF5~~ 🆘
 
 ### Serialization (`GData`)
 - Pickle
