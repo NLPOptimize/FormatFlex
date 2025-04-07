@@ -10,29 +10,34 @@
 
 ## Supported Data Formats
 
+Currently, it is largely divided into three categories: hierarchical, tabular, and general types. If there are other classification methods or missing parts in each type support, it would be better if you could leave it as an issue or send a PR.
+
+
+[API USAGE](./docs/API_USAGE.md)
+
 ### Hierarchical Data (`HData`)
-- XML
-- JSON
-- YAML
-- TOML
-- CBOR2
-- MSGPACK
+- [XML](https://en.wikipedia.org/wiki/XML)
+- [JSON](https://en.wikipedia.org/wiki/JSON)
+- [YAML](https://en.wikipedia.org/wiki/YAML)
+- [TOML](https://en.wikipedia.org/wiki/TOML)
+- [CBOR2](https://github.com/agronholm/cbor2)
+- [MSGPACK](https://msgpack.org/)
 - ~~BSON~~ 🆘
-- UBJSON
+- [UBJSON](https://ubjson.org/)
 
 ### Tabular Data (`TData`)
-- CSV
-- Excel
-- Parquet
-- ORC
-- Feather
+- [CSV](https://docs.python.org/ko/3.13/library/csv.html)
+- [Excel](https://www.microsoft.com/ko-kr/microsoft-365/excel)
+- [Parquet](https://parquet.apache.org/)
+- [ORC](https://orc.apache.org/)
+- [Feather](https://arrow.apache.org/docs/python/feather.html)
 - ~~HDF5~~ 🆘
 
 ### Serialization (`GData`)
-- Pickle
-- Dill
-- Cloudpickle
-- Joblib
+- [Pickle](https://docs.python.org/3/library/pickle.html)
+- [Dill](https://github.com/dill-format/dill)
+- [Cloudpickle](https://github.com/cloudpipe/cloudpickle)
+- [Joblib](https://joblib.readthedocs.io/en/stable/)
 
 ## Installation
 ```bash
